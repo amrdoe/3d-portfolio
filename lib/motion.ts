@@ -1,6 +1,6 @@
 type Direction = "left" | "right" | "up" | "down";
 
-export const textVariant = (delay: number) => {
+export const textVariant = (delay?: number) => {
   return {
     hidden: {
       y: -50,
@@ -19,7 +19,7 @@ export const textVariant = (delay: number) => {
 };
 
 export const fadeIn = (
-  direction: Direction,
+  direction: Direction | "",
   type: string,
   delay: number,
   duration: number
@@ -88,8 +88,8 @@ export const slideIn = (
 };
 
 export const staggerContainer = (
-  staggerChildren: any,
-  delayChildren: number
+  staggerChildren?: any,
+  delayChildren?: number
 ) => {
   return {
     hidden: {},
