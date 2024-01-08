@@ -12,10 +12,12 @@
     "@jdion/tilt-react": "^1.0.0",
     "@react-three/drei": "^9.93.0",
     "@react-three/fiber": "^8.15.13",
+    "@types/react-vertical-timeline-component": "^3.3.6",
     "framer-motion": "^10.17.9",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
+    "react-vertical-timeline-component": "^3.6.0",
     "three": "^0.160.0"
   },
   "devDependencies": {

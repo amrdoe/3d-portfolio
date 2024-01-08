@@ -1,8 +1,7 @@
 "use client";
 
 import { services } from "@/lib/constants";
-import { fadeIn, textVariant } from "@/lib/motion";
-import styles from "@/lib/styles";
+import { fadeIn } from "@/lib/motion";
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import Section from "./Section";
@@ -10,12 +9,7 @@ import { Tilt } from "@jdion/tilt-react";
 
 const About = () => {
   return (
-    <Section id="about">
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
-      </motion.div>
-
+    <Section id="about" subText="Introduction" headText="Overview.">
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
