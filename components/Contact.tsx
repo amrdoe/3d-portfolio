@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { slideIn } from "@/lib/motion";
 import styles from "@/lib/styles";
 import { EarthCanvas } from ".";
+import { send } from "@emailjs/browser";
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -14,8 +15,35 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
+
+    try {
+      await send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
+        {
+          from_name: name,
+          to_name: "Amr",
+          from_email: email,
+          to_email: "amrdoe@outlook.com",
+          message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      );
+
+      alert("Thank you! I will get back to you as soon as possible.");
+
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (e) {
+      console.error(e);
+      alert("Something went wrong.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -75,7 +103,10 @@ const Contact = () => {
           </form>
         </motion.div>
 
-        <motion.div variants={slideIn("right", "tween", 0.2, 1)} className="xl:flex-1 xl:height-auto md:h-[550px] h-[350px]">
+        <motion.div
+          variants={slideIn("right", "tween", 0.2, 1)}
+          className="xl:flex-1 xl:height-auto md:h-[550px] h-[350px]"
+        >
           <EarthCanvas />
         </motion.div>
       </div>

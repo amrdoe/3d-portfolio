@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@jdion/tilt-react": "^1.0.0",
     "@react-three/drei": "^9.93.0",
     "@react-three/fiber": "^8.15.13",
     "@types/react-vertical-timeline-component": "^3.3.6",
+    "@types/three": "^0.160.0",
     "framer-motion": "^10.17.9",
+    "maath": "^0.10.7",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
