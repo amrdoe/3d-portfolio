@@ -4,7 +4,7 @@ import useIsMobile from "@/lib/useIsMobile";
 import { useGLTF } from "@react-three/drei";
 import Canvas from "./Canvas";
 
-const ComputerCanvas = () => {
+const ComputersCanvas = () => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
   const isMobile = useIsMobile();
 
@@ -39,4 +39,4 @@ const ComputerCanvas = () => {
   );
 };
 
-export default ComputerCanvas;
+export default ComputersCanvas;
