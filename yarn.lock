@@ -94,6 +94,11 @@
     wrap-ansi "^8.1.0"
     wrap-ansi-cjs "npm:wrap-ansi@^7.0.0"
 
+"@jdion/tilt-react@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@jdion/tilt-react/-/tilt-react-1.0.0.tgz#00a12be65a725239ac532f845248b78d356d0dd7"
+  integrity sha512-Qvr0iwxoYc4BAxZzCkrCEF7Vk0DauFIY7eehKU6dCwdil6gj2tlYOOXkMDHMIrdcO6yYDL/yqLI4bNZr4F2swA==
+
 "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz#7e02e6eb5df901aaedb08514203b096614024098"
