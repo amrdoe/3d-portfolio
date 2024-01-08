@@ -8,7 +8,7 @@ const Section = ({
   headText,
   children,
 }: {
-  id: string;
+  id?: string;
   subText?: string;
   headText?: string;
   children?: React.ReactNode;
